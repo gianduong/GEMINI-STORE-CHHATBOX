@@ -55,7 +55,7 @@
         .auth-form {
             display: flex;
             gap: 12px;
-            align-items: center;
+            align-items: flex-end;
             flex-wrap: wrap;
         }
 
@@ -134,6 +134,137 @@
             opacity: 0.6;
             cursor: not-allowed;
             transform: none !important;
+        }
+
+        /* Script Integration Section */
+        .script-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .script-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .script-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0;
+        }
+
+        .copy-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .copy-btn:hover {
+            background: #059669;
+            transform: translateY(-1px);
+        }
+
+        .copy-btn.copied {
+            background: #3b82f6;
+        }
+
+        .script-code {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 16px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+            border: 1px solid #374151;
+            position: relative;
+        }
+
+        .script-code::before {
+            content: 'HTML';
+            position: absolute;
+            top: -8px;
+            left: 12px;
+            background: #1f2937;
+            color: #9ca3af;
+            padding: 2px 8px;
+            font-size: 10px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .script-instructions {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .script-instructions h4 {
+            margin: 0 0 8px 0;
+            color: #0369a1;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .script-instructions ol {
+            margin: 0;
+            padding-left: 20px;
+            color: #0c4a6e;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .script-instructions li {
+            margin-bottom: 4px;
+        }
+
+        .script-preview {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .script-preview h4 {
+            margin: 0 0 12px 0;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .preview-demo {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 12px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: #64748b;
+            text-align: left;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
         .upload-section {
@@ -345,6 +476,30 @@
                 align-items: stretch;
             }
 
+            .script-section {
+                padding: 16px;
+            }
+
+            .script-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .script-code {
+                font-size: 11px;
+                padding: 12px;
+            }
+
+            .script-instructions ol {
+                font-size: 12px;
+            }
+
+            .preview-demo {
+                font-size: 10px;
+                padding: 8px;
+            }
+
             .documents-table {
                 font-size: 12px;
             }
@@ -369,7 +524,7 @@
             <h2 style="margin-bottom: 16px;">Xác thực Admin</h2>
             <div class="auth-form">
                 <div class="form-group">
-                    <label for="admin-token">Admin Token</label>
+                    <label for="admin-token">Admin Token  (token là admin123)</label>
                     <input 
                         type="password" 
                         id="admin-token" 
@@ -399,6 +554,34 @@
                 <div class="stat-card">
                     <div class="stat-number" id="total-size">-</div>
                     <div class="stat-label">Dung lượng</div>
+                </div>
+            </div>
+
+            <!-- Script Integration Section -->
+            <div class="script-section">
+                <div class="script-header">
+                    <h2 class="script-title">🔗 Tích hợp Chatbox vào Website</h2>
+                    <button id="copy-script-btn" class="copy-btn">
+                        <span>📋</span> Copy Code
+                    </button>
+                </div>
+                
+                <div class="script-code" id="script-code">&lt;!-- Gemini Store Chatbox --&gt;<br>&lt;script src="<span id="script-url">https://jun99hm.xyz/ai-chatbox/widget</span>"&gt;&lt;/script&gt;</div>
+                
+                <div class="script-instructions">
+                    <h4>📋 Hướng dẫn tích hợp:</h4>
+                    <ol>
+                        <li>Copy đoạn code HTML ở trên</li>
+                        <li>Paste vào phần &lt;head&gt; của website của bạn</li>
+                        <li>Code đã sẵn sàng để sử dụng với domain jun99hm.xyz</li>
+                        <li>Lưu và reload trang web</li>
+                        <li>Chatbox sẽ xuất hiện ở góc dưới bên phải</li>
+                    </ol>
+                </div>
+                
+                <div class="script-preview">
+                    <h4>👀 Xem trước:</h4>
+                    <div class="preview-demo">&lt;head&gt;<br>&nbsp;&nbsp;&lt;title&gt;Website của bạn&lt;/title&gt;<br>&nbsp;&nbsp;&lt;!-- Gemini Store Chatbox --&gt;<br>&nbsp;&nbsp;&lt;script src="https://jun99hm.xyz/ai-chatbox/widget"&gt;&lt;/script&gt;<br>&lt;/head&gt;</div>
                 </div>
             </div>
 
@@ -473,7 +656,7 @@
         // Utility functions
         function showAlert(element, message, type = 'error') {
             element.textContent = message;
-            element.className = `alert alert-${type}`;
+            element.className = 'alert alert-' + type;
             element.classList.remove('hidden');
             
             setTimeout(() => {
@@ -512,7 +695,7 @@
             loginBtn.innerHTML = '<span class="loading"></span> Đang xác thực...';
 
             try {
-                const response = await fetch(`${API_BASE}/api/admin/login`, {
+                const response = await fetch(API_BASE + '/api/admin/login', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -545,7 +728,7 @@
             documentsTable.classList.add('hidden');
 
             try {
-                const response = await fetch(`${API_BASE}/api/upload/list`, {
+                const response = await fetch(API_BASE + '/api/upload/list', {
                     headers: {
                         'x-admin-token': adminToken
                     }
@@ -569,47 +752,46 @@
         // Display documents
         function displayDocuments(documents) {
             if (documents.length === 0) {
-                documentsTbody.innerHTML = `
-                    <tr>
-                        <td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">
-                            Chưa có tài liệu nào
-                        </td>
-                    </tr>
-                `;
+                documentsTbody.innerHTML = 
+                    '<tr>' +
+                        '<td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">' +
+                            'Chưa có tài liệu nào' +
+                        '</td>' +
+                    '</tr>';
                 return;
             }
 
-            documentsTbody.innerHTML = documents.map(doc => `
-                <tr>
-                    <td>
-                        <span class="file-icon">${getFileIcon(doc.mimeType)}</span>
-                        ${doc.filename}
-                    </td>
-                    <td>
-                        <span class="status-badge status-success">
-                            ${doc.mimeType.split('/')[1].toUpperCase()}
-                        </span>
-                    </td>
-                    <td>${formatFileSize(doc.size)}</td>
-                    <td>${doc.chunkCount || 0}</td>
-                    <td>${formatDate(doc.createdAt)}</td>
-                    <td>
-                        <button 
-                            class="btn btn-danger" 
-                            onclick="deleteDocument('${doc.id}')"
-                            style="padding: 6px 12px; font-size: 12px;"
-                        >
-                            🗑️ Xóa
-                        </button>
-                    </td>
-                </tr>
-            `).join('');
+            documentsTbody.innerHTML = documents.map(doc => 
+                '<tr>' +
+                    '<td>' +
+                        '<span class="file-icon">' + getFileIcon(doc.mimeType) + '</span>' +
+                        doc.filename +
+                    '</td>' +
+                    '<td>' +
+                        '<span class="status-badge status-success">' +
+                            doc.mimeType.split('/')[1].toUpperCase() +
+                        '</span>' +
+                    '</td>' +
+                    '<td>' + formatFileSize(doc.size) + '</td>' +
+                    '<td>' + (doc.chunkCount || 0) + '</td>' +
+                    '<td>' + formatDate(doc.createdAt) + '</td>' +
+                    '<td>' +
+                        '<button ' +
+                            'class="btn btn-danger" ' +
+                            'onclick="deleteDocument(\'' + doc.id + '\')" ' +
+                            'style="padding: 6px 12px; font-size: 12px;"' +
+                        '>' +
+                            '🗑️ Xóa' +
+                        '</button>' +
+                    '</td>' +
+                '</tr>'
+            ).join('');
         }
 
         // Load stats
         async function loadStats() {
             try {
-                const response = await fetch(`${API_BASE}/api/upload/list`, {
+                const response = await fetch(API_BASE + '/api/upload/list', {
                     headers: {
                         'x-admin-token': adminToken
                     }
@@ -639,7 +821,7 @@
             }
 
             try {
-                const response = await fetch(`${API_BASE}/api/upload/${docId}`, {
+                const response = await fetch(API_BASE + '/api/upload/' + docId, {
                     method: 'DELETE',
                     headers: {
                         'x-admin-token': adminToken
@@ -666,7 +848,7 @@
             formData.append('file', file);
 
             try {
-                const response = await fetch(`${API_BASE}/api/upload`, {
+                const response = await fetch(API_BASE + '/api/upload', {
                     method: 'POST',
                     headers: {
                         'x-admin-token': adminToken
@@ -677,7 +859,7 @@
                 const data = await response.json();
 
                 if (response.ok && data.success) {
-                    showAlert(uploadAlert, `Upload thành công: ${file.name}`, 'success');
+                    showAlert(uploadAlert, 'Upload thành công: ' + file.name, 'success');
                     loadDocuments();
                     loadStats();
                 } else {
@@ -727,6 +909,53 @@
         uploadArea.addEventListener('click', () => {
             fileInput.click();
         });
+
+        // Script integration functionality
+        const copyScriptBtn = document.getElementById('copy-script-btn');
+        const scriptCode = document.getElementById('script-code');
+        const scriptUrl = document.getElementById('script-url');
+        
+        // Update script URL with current domain
+        function updateScriptUrl() {
+            const currentDomain = 'https://jun99hm.xyz/ai-chatbox';
+            scriptUrl.textContent = currentDomain + '/widget';
+            
+            // Update the script code content
+            scriptCode.innerHTML = '&lt;!-- Gemini Store Chatbox --&gt;<br>&lt;script src="' + currentDomain + '/widget"&gt;&lt;/script&gt;';
+        }
+        
+        // Copy script to clipboard
+        async function copyScript() {
+            const scriptText = "<!-- Gemini Store Chatbox -->\n<script src=\"https://jun99hm.xyz/ai-chatbox/widget\"><\/script>";
+            
+            try {
+                await navigator.clipboard.writeText(scriptText);
+                
+                // Update button state
+                const originalText = copyScriptBtn.innerHTML;
+                copyScriptBtn.innerHTML = '<span>✅</span> Đã copy!';
+                copyScriptBtn.classList.add('copied');
+                
+                // Reset button after 2 seconds
+                setTimeout(() => {
+                    copyScriptBtn.innerHTML = originalText;
+                    copyScriptBtn.classList.remove('copied');
+                }, 2000);
+                
+                // Show success message
+                showAlert(document.getElementById('auth-alert'), 'Đã copy code vào clipboard!', 'success');
+                
+            } catch (error) {
+                console.error('Failed to copy:', error);
+                showAlert(document.getElementById('auth-alert'), 'Không thể copy code. Vui lòng copy thủ công.', 'error');
+            }
+        }
+        
+        // Add event listener for copy button
+        copyScriptBtn.addEventListener('click', copyScript);
+        
+        // Update script URL on page load
+        updateScriptUrl();
 
         // Initialize
         console.log('🤖 Admin Panel loaded successfully');
