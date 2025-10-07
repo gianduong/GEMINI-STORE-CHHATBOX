@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Gemini Store Chatbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            color: #334155;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .auth-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .auth-form {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+
+        .upload-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .upload-area {
+            border: 2px dashed #d1d5db;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            background: #f9fafb;
+        }
+
+        .upload-area:hover {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+
+        .upload-area.dragover {
+            border-color: #3b82f6;
+            background: #dbeafe;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        .upload-text {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374151;
+        }
+
+        .upload-subtext {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .documents-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .documents-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+
+        .documents-table th,
+        .documents-table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .documents-table th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .documents-table td {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .documents-table tr:hover {
+            background: #f8fafc;
+        }
+
+        .file-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .status-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .status-success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .status-error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .status-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 50%;
+            border-top-color: #3b82f6;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+
+        .alert-success {
+            background: #dcfce7;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .alert-error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+
+        .alert-warning {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+
+            .auth-form {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .documents-table {
+                font-size: 12px;
+            }
+
+            .documents-table th,
+            .documents-table td {
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🤖 Admin Panel</h1>
+            <p>Quản lý tài liệu và cấu hình cho Gemini Store Chatbox</p>
+        </div>
+
+        <!-- Authentication Section -->
+        <div class="auth-section" id="auth-section">
+            <h2 style="margin-bottom: 16px;">Xác thực Admin</h2>
+            <div class="auth-form">
+                <div class="form-group">
+                    <label for="admin-token">Admin Token</label>
+                    <input 
+                        type="password" 
+                        id="admin-token" 
+                        class="form-input" 
+                        placeholder="Nhập admin token..."
+                    />
+                </div>
+                <button id="login-btn" class="btn btn-primary">
+                    <span>Đăng nhập</span>
+                </button>
+            </div>
+            <div id="auth-alert" class="alert hidden"></div>
+        </div>
+
+        <!-- Main Content (hidden until authenticated) -->
+        <div id="main-content" class="hidden">
+            <!-- Stats -->
+            <div class="stats-grid" id="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-docs">-</div>
+                    <div class="stat-label">Tài liệu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-chunks">-</div>
+                    <div class="stat-label">Chunks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-size">-</div>
+                    <div class="stat-label">Dung lượng</div>
+                </div>
+            </div>
+
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2 style="margin-bottom: 16px;">📤 Upload Tài liệu</h2>
+                <div class="upload-area" id="upload-area">
+                    <div class="upload-icon">📄</div>
+                    <div class="upload-text">Kéo thả file vào đây hoặc click để chọn</div>
+                    <div class="upload-subtext">Hỗ trợ: PDF, DOCX, TXT (tối đa 10MB)</div>
+                    <input type="file" id="file-input" class="file-input" accept=".pdf,.docx,.txt,.doc" multiple />
+                    <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">
+                        Chọn File
+                    </button>
+                </div>
+                <div id="upload-alert" class="alert hidden"></div>
+            </div>
+
+            <!-- Documents Section -->
+            <div class="documents-section">
+                <div class="section-header">
+                    <h2 class="section-title">📚 Danh sách Tài liệu</h2>
+                    <button id="refresh-btn" class="btn btn-secondary">
+                        <span>🔄</span> Làm mới
+                    </button>
+                </div>
+                
+                <div id="documents-loading" class="loading hidden"></div>
+                
+                <table class="documents-table" id="documents-table">
+                    <thead>
+                        <tr>
+                            <th>Tên file</th>
+                            <th>Loại</th>
+                            <th>Kích thước</th>
+                            <th>Chunks</th>
+                            <th>Ngày tạo</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="documents-tbody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">
+                                Chưa có tài liệu nào
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const API_BASE = window.location.origin;
+        let adminToken = '';
+
+        // DOM Elements
+        const authSection = document.getElementById('auth-section');
+        const mainContent = document.getElementById('main-content');
+        const adminTokenInput = document.getElementById('admin-token');
+        const loginBtn = document.getElementById('login-btn');
+        const authAlert = document.getElementById('auth-alert');
+        const uploadArea = document.getElementById('upload-area');
+        const fileInput = document.getElementById('file-input');
+        const uploadAlert = document.getElementById('upload-alert');
+        const documentsTable = document.getElementById('documents-table');
+        const documentsTbody = document.getElementById('documents-tbody');
+        const documentsLoading = document.getElementById('documents-loading');
+        const refreshBtn = document.getElementById('refresh-btn');
+
+        // Utility functions
+        function showAlert(element, message, type = 'error') {
+            element.textContent = message;
+            element.className = `alert alert-${type}`;
+            element.classList.remove('hidden');
+            
+            setTimeout(() => {
+                element.classList.add('hidden');
+            }, 5000);
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        function formatDate(timestamp) {
+            return new Date(timestamp).toLocaleString('vi-VN');
+        }
+
+        function getFileIcon(mimeType) {
+            if (mimeType.includes('pdf')) return '📄';
+            if (mimeType.includes('word') || mimeType.includes('document')) return '📝';
+            if (mimeType.includes('text')) return '📄';
+            return '📄';
+        }
+
+        // Authentication
+        async function authenticate() {
+            const token = adminTokenInput.value.trim();
+            if (!token) {
+                showAlert(authAlert, 'Vui lòng nhập admin token', 'error');
+                return;
+            }
+
+            loginBtn.disabled = true;
+            loginBtn.innerHTML = '<span class="loading"></span> Đang xác thực...';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/admin/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ token })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    adminToken = token;
+                    authSection.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                    loadDocuments();
+                    loadStats();
+                } else {
+                    showAlert(authAlert, data.message || 'Token không hợp lệ', 'error');
+                }
+            } catch (error) {
+                showAlert(authAlert, 'Lỗi kết nối. Vui lòng thử lại.', 'error');
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.innerHTML = '<span>Đăng nhập</span>';
+            }
+        }
+
+        // Load documents
+        async function loadDocuments() {
+            documentsLoading.classList.remove('hidden');
+            documentsTable.classList.add('hidden');
+
+            try {
+                const response = await fetch(`${API_BASE}/api/upload/list`, {
+                    headers: {
+                        'x-admin-token': adminToken
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    displayDocuments(data.documents || []);
+                } else {
+                    showAlert(uploadAlert, 'Lỗi tải danh sách tài liệu', 'error');
+                }
+            } catch (error) {
+                showAlert(uploadAlert, 'Lỗi kết nối khi tải tài liệu', 'error');
+            } finally {
+                documentsLoading.classList.add('hidden');
+                documentsTable.classList.remove('hidden');
+            }
+        }
+
+        // Display documents
+        function displayDocuments(documents) {
+            if (documents.length === 0) {
+                documentsTbody.innerHTML = `
+                    <tr>
+                        <td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">
+                            Chưa có tài liệu nào
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            documentsTbody.innerHTML = documents.map(doc => `
+                <tr>
+                    <td>
+                        <span class="file-icon">${getFileIcon(doc.mimeType)}</span>
+                        ${doc.filename}
+                    </td>
+                    <td>
+                        <span class="status-badge status-success">
+                            ${doc.mimeType.split('/')[1].toUpperCase()}
+                        </span>
+                    </td>
+                    <td>${formatFileSize(doc.size)}</td>
+                    <td>${doc.chunkCount || 0}</td>
+                    <td>${formatDate(doc.createdAt)}</td>
+                    <td>
+                        <button 
+                            class="btn btn-danger" 
+                            onclick="deleteDocument('${doc.id}')"
+                            style="padding: 6px 12px; font-size: 12px;"
+                        >
+                            🗑️ Xóa
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Load stats
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/api/upload/list`, {
+                    headers: {
+                        'x-admin-token': adminToken
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    const documents = data.documents || [];
+                    const totalDocs = documents.length;
+                    const totalChunks = documents.reduce((sum, doc) => sum + (doc.chunkCount || 0), 0);
+                    const totalSize = documents.reduce((sum, doc) => sum + doc.size, 0);
+
+                    document.getElementById('total-docs').textContent = totalDocs;
+                    document.getElementById('total-chunks').textContent = totalChunks;
+                    document.getElementById('total-size').textContent = formatFileSize(totalSize);
+                }
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        // Delete document
+        async function deleteDocument(docId) {
+            if (!confirm('Bạn có chắc chắn muốn xóa tài liệu này?')) {
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE}/api/upload/${docId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'x-admin-token': adminToken
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    showAlert(uploadAlert, 'Xóa tài liệu thành công', 'success');
+                    loadDocuments();
+                    loadStats();
+                } else {
+                    showAlert(uploadAlert, data.message || 'Lỗi xóa tài liệu', 'error');
+                }
+            } catch (error) {
+                showAlert(uploadAlert, 'Lỗi kết nối khi xóa tài liệu', 'error');
+            }
+        }
+
+        // Upload file
+        async function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(`${API_BASE}/api/upload`, {
+                    method: 'POST',
+                    headers: {
+                        'x-admin-token': adminToken
+                    },
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    showAlert(uploadAlert, `Upload thành công: ${file.name}`, 'success');
+                    loadDocuments();
+                    loadStats();
+                } else {
+                    showAlert(uploadAlert, data.message || 'Lỗi upload file', 'error');
+                }
+            } catch (error) {
+                showAlert(uploadAlert, 'Lỗi kết nối khi upload file', 'error');
+            }
+        }
+
+        // Event listeners
+        loginBtn.addEventListener('click', authenticate);
+        adminTokenInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') authenticate();
+        });
+
+        refreshBtn.addEventListener('click', () => {
+            loadDocuments();
+            loadStats();
+        });
+
+        // File upload
+        fileInput.addEventListener('change', (e) => {
+            const files = Array.from(e.target.files);
+            files.forEach(uploadFile);
+            e.target.value = '';
+        });
+
+        // Drag and drop
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            
+            const files = Array.from(e.dataTransfer.files);
+            files.forEach(uploadFile);
+        });
+
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Initialize
+        console.log('🤖 Admin Panel loaded successfully');
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chatbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .test-info {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-info">
+        <h1>🧪 Test Chatbox</h1>
+        <p>Trang này để test chức năng đóng/mở chatbox.</p>
+        
+        <div class="instructions">
+            <h3>Hướng dẫn test:</h3>
+            <ol>
+                <li>Click vào nút chat ở góc phải màn hình để mở chatbox</li>
+                <li>Click vào nút <strong>×</strong> ở góc trên bên phải của chatbox để đóng</li>
+                <li>Kiểm tra console (F12) để xem debug messages</li>
+            </ol>
+        </div>
+        
+        <p><strong>Lưu ý:</strong> Mở Developer Tools (F12) để xem console logs khi test.</p>
+    </div>
+    
+    <!-- Gemini Store Chatbox Widget -->
+    <script src="http://localhost:3000/widget.js" defer data-api="http://localhost:3000"></script>
+</body>
+</html>
