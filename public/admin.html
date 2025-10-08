@@ -3,7 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Gemini Store Chatbox</title>
+    <title>Admin Panel - Gemini Store Chatbox | Quản lý AI Chatbot</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Admin Panel Gemini Store Chatbox - Quản lý AI chatbot chuyên nghiệp cho cửa hàng. Upload tài liệu, cấu hình chatbox, tích hợp dễ dàng với Google Gemini AI.">
+    <meta name="keywords" content="admin panel, gemini chatbox, AI chatbot, quản lý chatbot, cửa hàng AI, Google Gemini, customer support">
+    <meta name="author" content="Gemini Store Chatbox">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Admin Panel - Gemini Store Chatbox">
+    <meta property="og:description" content="Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jun99hm.xyz/ai-chatbox/admin">
+    <meta property="og:image" content="https://jun99hm.xyz/ai-chatbox/admin-preview.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Admin Panel - Gemini Store Chatbox">
+    <meta name="twitter:description" content="Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI">
+    <meta name="twitter:image" content="https://jun99hm.xyz/ai-chatbox/admin-preview.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jun99hm.xyz/ai-chatbox/admin">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Gemini Store Chatbox Admin Panel",
+        "description": "Admin panel để quản lý AI chatbot cho cửa hàng với Google Gemini AI",
+        "url": "https://jun99hm.xyz/ai-chatbox/admin",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Gemini Store Chatbox",
+            "url": "https://jun99hm.xyz"
+        }
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -439,6 +487,224 @@
             display: none !important;
         }
 
+        /* Features Section */
+        .features-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .features-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* How to Use Section */
+        .how-to-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .how-to-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px;
+            background: #f0f9ff;
+            border-radius: 12px;
+            border: 1px solid #bae6fd;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .faq-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-container {
+            display: grid;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .faq-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        /* Cross-sell Section */
+        .cross-sell-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .cross-sell-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cross-sell-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cross-sell-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .cross-sell-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .cross-sell-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .cross-sell-item h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .cross-sell-item p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .cross-sell-item .btn {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -471,9 +737,38 @@
                 padding: 16px;
             }
 
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
             .auth-form {
                 flex-direction: column;
                 align-items: stretch;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cross-sell-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step-number {
+                align-self: center;
             }
 
             .script-section {
@@ -515,16 +810,16 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>🤖 Admin Panel</h1>
-            <p>Quản lý tài liệu và cấu hình cho Gemini Store Chatbox</p>
+            <h1>🤖 Admin Panel - Gemini Store Chatbox</h1>
+            <p>Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI - Upload tài liệu, cấu hình chatbox và tích hợp dễ dàng</p>
         </div>
 
         <!-- Authentication Section -->
         <div class="auth-section" id="auth-section">
-            <h2 style="margin-bottom: 16px;">Xác thực Admin</h2>
+            <h2 style="margin-bottom: 16px;">🔐 Xác thực Admin</h2>
             <div class="auth-form">
                 <div class="form-group">
-                    <label for="admin-token">Admin Token  (token là admin123)</label>
+                    <label for="admin-token">Admin Token (token là admin123)</label>
                     <input 
                         type="password" 
                         id="admin-token" 
@@ -537,6 +832,116 @@
                 </button>
             </div>
             <div id="auth-alert" class="alert hidden"></div>
+        </div>
+
+        <!-- Features Overview Section -->
+        <div class="features-section" id="features-section">
+            <h2>🚀 Tính năng chính của Gemini Store Chatbox</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Chatbot thông minh</h3>
+                    <p>Sử dụng Google Gemini AI để trả lời khách hàng 24/7 với độ chính xác cao</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Quản lý tài liệu</h3>
+                    <p>Upload và quản lý tài liệu PDF, DOCX để chatbot học hỏi và trả lời chính xác</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Tích hợp dễ dàng</h3>
+                    <p>Chỉ cần copy 1 dòng code HTML để tích hợp chatbox vào website</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Theo dõi hiệu suất</h3>
+                    <p>Xem thống kê số lượng tài liệu, chunks và dung lượng đã upload</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- How to Use Section -->
+        <div class="how-to-section" id="how-to-section">
+            <h2>📖 Hướng dẫn sử dụng</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Đăng nhập Admin Panel</h3>
+                        <p>Nhập admin token "admin123" để truy cập vào hệ thống quản lý</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Upload tài liệu</h3>
+                        <p>Kéo thả hoặc chọn file PDF, DOCX để chatbot học hỏi thông tin</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Copy code tích hợp</h3>
+                        <p>Copy đoạn code HTML và paste vào website của bạn</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Kiểm tra hoạt động</h3>
+                        <p>Chatbox sẽ xuất hiện ở góc dưới bên phải website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section" id="faq-section">
+            <h2>❓ Câu hỏi thường gặp</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3>Chatbox có hỗ trợ tiếng Việt không?</h3>
+                    <p>Có, Gemini Store Chatbox hỗ trợ đầy đủ tiếng Việt và có thể trả lời bằng tiếng Việt tự nhiên.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Tôi có thể upload bao nhiêu tài liệu?</h3>
+                    <p>Không giới hạn số lượng tài liệu, nhưng mỗi file tối đa 10MB để đảm bảo hiệu suất.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Chatbox có hoạt động trên mobile không?</h3>
+                    <p>Có, chatbox được tối ưu hoàn toàn cho mobile và responsive trên mọi thiết bị.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Làm sao để chatbot trả lời chính xác hơn?</h3>
+                    <p>Upload nhiều tài liệu liên quan đến sản phẩm/dịch vụ của bạn để chatbot có thêm kiến thức.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cross-sell Section -->
+        <div class="cross-sell-section" id="cross-sell-section">
+            <h2>🔗 Công cụ liên quan</h2>
+            <div class="cross-sell-grid">
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">📊</div>
+                    <h3>Google Analytics</h3>
+                    <p>Theo dõi hiệu suất chatbox và phân tích hành vi khách hàng</p>
+                    <a href="https://analytics.google.com" target="_blank" class="btn btn-secondary">Tìm hiểu thêm</a>
+                </div>
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">🎨</div>
+                    <h3>Customize Chatbox</h3>
+                    <p>Tùy chỉnh giao diện và màu sắc chatbox phù hợp với brand</p>
+                    <a href="#" class="btn btn-secondary">Tùy chỉnh</a>
+                </div>
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">📈</div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Báo cáo chi tiết về cuộc hội thoại và tỷ lệ chuyển đổi</p>
+                    <a href="#" class="btn btn-secondary">Xem báo cáo</a>
+                </div>
+            </div>
         </div>
 
         <!-- Main Content (hidden until authenticated) -->
