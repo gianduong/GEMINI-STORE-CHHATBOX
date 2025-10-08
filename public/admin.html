@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,13 @@
     
     <!-- SEO Meta Tags -->
     <meta name="description" content="Free AI Chatbot Management Tool - Admin Panel Gemini Store Chatbox. Upload documents, configure chatbot, easy integration with Google Gemini AI. Start free today!">
-    <meta name="keywords" content="admin panel, gemini chatbox, AI chatbot, quản lý chatbot, cửa hàng AI, Google Gemini, customer support">
+    <meta name="keywords" content="admin panel, gemini chatbox, AI chatbot, chatbot management, store AI, Google Gemini, customer support">
     <meta name="author" content="Gemini Store Chatbox">
     <meta name="robots" content="noindex, nofollow">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Admin Panel - Gemini Store Chatbox">
-    <meta property="og:description" content="Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI">
+    <meta property="og:description" content="Professional AI chatbot management for stores with Google Gemini AI">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jun99hm.xyz/ai-chatbox/admin">
     <meta property="og:image" content="https://jun99hm.xyz/ai-chatbox/admin-preview.jpg">
@@ -21,7 +21,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Admin Panel - Gemini Store Chatbox">
-    <meta name="twitter:description" content="Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI">
+    <meta name="twitter:description" content="Professional AI chatbot management for stores with Google Gemini AI">
     <meta name="twitter:image" content="https://jun99hm.xyz/ai-chatbox/admin-preview.jpg">
     
     <!-- Canonical URL -->
@@ -55,34 +55,34 @@
             "mainEntity": [
                 {
                     "@type": "Question",
-                    "name": "Chatbox có hỗ trợ tiếng Việt không?",
+                    "name": "Does the chatbox support Vietnamese?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Có, Gemini Store Chatbox hỗ trợ đầy đủ tiếng Việt và có thể trả lời bằng tiếng Việt tự nhiên."
+                        "text": "Yes, Gemini Store Chatbox fully supports Vietnamese and can respond naturally in Vietnamese."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Tôi có thể upload bao nhiêu tài liệu?",
+                    "name": "How many documents can I upload?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Không giới hạn số lượng tài liệu, nhưng mỗi file tối đa 10MB để đảm bảo hiệu suất."
+                        "text": "No limit on the number of documents, but each file is limited to 10MB to ensure performance."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Chatbox có hoạt động trên mobile không?",
+                    "name": "Does the chatbox work on mobile?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Có, chatbox được tối ưu hoàn toàn cho mobile và responsive trên mọi thiết bị."
+                        "text": "Yes, the chatbox is fully optimized for mobile and responsive on all devices."
                     }
                 },
                 {
                     "@type": "Question",
-                    "name": "Làm sao để chatbot trả lời chính xác hơn?",
+                    "name": "How to make the chatbot more accurate?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Upload nhiều tài liệu liên quan đến sản phẩm/dịch vụ của bạn để chatbot có thêm kiến thức."
+                        "text": "Upload more documents related to your products/services so the chatbot has more knowledge."
                     }
                 }
             ]
@@ -861,6 +861,421 @@
             padding: 8px 16px;
         }
 
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            padding: 40px 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .faq-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .faq-section p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .faq-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* How To Use Section */
+        .how-to-section {
+            background: white;
+            padding: 40px 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .how-to-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .how-to-section p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .steps-container {
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 16px;
+            color: #6b7280;
+            margin: 0;
+        }
+
+        /* Metrics Section */
+        .metrics-section {
+            background: white;
+            padding: 40px 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .metrics-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .metrics-section p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .metric-card {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .metric-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .metric-card p {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .metric-example {
+            background: #dbeafe;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #1e40af;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: white;
+            padding: 40px 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .features-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+
+        .features-section p {
+            font-size: 16px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* More Tools Section */
+        .more-tools-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .more-tools-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tool-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .tool-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .tool-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .tool-features {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Boost Results Section */
+        .boost-results-section {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 40px 24px;
+            border-radius: 16px;
+            border: 1px solid #bae6fd;
+            margin-bottom: 24px;
+        }
+
+        .boost-results-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .boost-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .boost-text h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 12px;
+        }
+
+        .boost-text p {
+            font-size: 16px;
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .boost-benefits {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .boost-benefits li {
+            font-size: 16px;
+            color: #1e3a8a;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .boost-cta {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .boost-visual {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .boost-chart {
+            display: flex;
+            align-items: end;
+            gap: 20px;
+            height: 200px;
+            margin-bottom: 16px;
+        }
+
+        .chart-bar {
+            width: 60px;
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 8px;
+            position: relative;
+        }
+
+        .chart-label {
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+        }
+
+        .chart-value {
+            font-size: 14px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .chart-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e3a8a;
+            text-align: center;
+        }
+
         /* Metrics Section */
         .metrics-section {
             background: white;
@@ -1169,9 +1584,34 @@
                 justify-content: center;
             }
 
+            .boost-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .boost-chart {
+                height: 150px;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
             .step {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .faq-container {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
             }
 
             .step-number {
@@ -1220,15 +1660,15 @@
             <div class="hero-banner">
                 <div class="hero-content">
                     <h1>🤖 Admin Panel Gemini Store Chatbox - Free AI Chatbot Management Tool</h1>
-                    <p class="hero-subtitle">Tăng 300% hiệu quả customer support với AI chatbot thông minh - Quản lý dễ dàng, tích hợp nhanh chóng, miễn phí hoàn toàn</p>
+                    <p class="hero-subtitle">Boost customer support efficiency by 300% with intelligent AI chatbot - Easy management, quick integration, completely free</p>
                     <div class="hero-cta">
                         <button id="hero-login-btn" class="btn btn-primary btn-large">
-                            <span>🚀 Bắt đầu miễn phí ngay</span>
+                            <span>🚀 Start Free Now</span>
                         </button>
                         <div class="hero-stats">
-                            <span class="stat-item">✅ Miễn phí 100%</span>
-                            <span class="stat-item">⚡ Setup trong 5 phút</span>
-                            <span class="stat-item">🎯 Tăng conversion 300%</span>
+                            <span class="stat-item">✅ 100% Free</span>
+                            <span class="stat-item">⚡ Setup in 5 minutes</span>
+                            <span class="stat-item">🎯 300% Conversion Boost</span>
                         </div>
                     </div>
                 </div>
@@ -1240,9 +1680,9 @@
                         <div class="preview-screen">
                             <div class="screen-header">Gemini Store Chatbox</div>
                             <div class="screen-content">
-                                <div class="chat-message user">Xin chào, tôi muốn hỏi về sản phẩm</div>
-                                <div class="chat-message bot">Chào bạn! Tôi có thể giúp bạn tìm hiểu về sản phẩm phù hợp. Bạn quan tâm đến sản phẩm nào?</div>
-                                <div class="typing-indicator">AI đang trả lời...</div>
+                                <div class="chat-message user">Hello, I want to ask about products</div>
+                                <div class="chat-message bot">Hi! I can help you find the right product. What are you interested in?</div>
+                                <div class="typing-indicator">AI is responding...</div>
                             </div>
                         </div>
                     </div>
@@ -1252,179 +1692,175 @@
 
         <!-- Authentication Section -->
         <div class="auth-section" id="auth-section">
-            <h2 style="margin-bottom: 16px;">🔐 Xác thực Admin</h2>
+            <h2 style="margin-bottom: 16px;">🔐 Admin Authentication</h2>
             <div class="auth-form">
                 <div class="form-group">
-                    <label for="admin-token">Admin Token (token là admin123)</label>
+                    <label for="admin-token">Admin Token (use: admin123)</label>
                     <input 
                         type="password" 
                         id="admin-token" 
                         class="form-input" 
-                        placeholder="Nhập admin token..."
+                        placeholder="Enter admin token..."
                     />
                 </div>
                 <button id="login-btn" class="btn btn-primary">
-                    <span>Đăng nhập</span>
+                    <span>Login</span>
                 </button>
             </div>
             <div id="auth-alert" class="alert hidden"></div>
         </div>
 
-        <!-- Features Overview Section -->
-        <div class="features-section" id="features-section">
-            <h2>🚀 Tính năng chính của Gemini Store Chatbox</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI Chatbot thông minh</h3>
-                    <p>Sử dụng Google Gemini AI để trả lời khách hàng 24/7 với độ chính xác cao</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Quản lý tài liệu</h3>
-                    <p>Upload và quản lý tài liệu PDF, DOCX để chatbot học hỏi và trả lời chính xác</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Tích hợp dễ dàng</h3>
-                    <p>Chỉ cần copy 1 dòng code HTML để tích hợp chatbox vào website</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Theo dõi hiệu suất</h3>
-                    <p>Xem thống kê số lượng tài liệu, chunks và dung lượng đã upload</p>
-                </div>
-            </div>
-        </div>
 
-        <!-- How to Use Section -->
-        <div class="how-to-section" id="how-to-section">
-            <h2>📖 Hướng dẫn sử dụng</h2>
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Đăng nhập Admin Panel</h3>
-                        <p>Nhập admin token "admin123" để truy cập vào hệ thống quản lý</p>
-                    </div>
+        <!-- Cross Sell Section -->
+        <div class="cross-sell-section" id="cross-sell-section">
+            <h2>🔗 Cross Sell</h2>
+            <p>Consider adding links or mentions of related tools or apps (cross-sell opportunities).</p>
+            <div class="cross-sell-grid">
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">📊</div>
+                    <h3>Google Analytics</h3>
+                    <p>Track chatbox performance and analyze customer behavior</p>
+                    <a href="https://analytics.google.com" target="_blank" class="btn btn-secondary">Learn More</a>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Upload tài liệu</h3>
-                        <p>Kéo thả hoặc chọn file PDF, DOCX để chatbot học hỏi thông tin</p>
-                    </div>
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">🎨</div>
+                    <h3>Customize Chatbox</h3>
+                    <p>Customize interface and colors to match your brand</p>
+                    <a href="#" class="btn btn-secondary">Customize</a>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Copy code tích hợp</h3>
-                        <p>Copy đoạn code HTML và paste vào website của bạn</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Kiểm tra hoạt động</h3>
-                        <p>Chatbox sẽ xuất hiện ở góc dưới bên phải website</p>
-                    </div>
+                <div class="cross-sell-item">
+                    <div class="cross-sell-icon">📈</div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Detailed reports on conversations and conversion rates</p>
+                    <a href="#" class="btn btn-secondary">View Reports</a>
                 </div>
             </div>
         </div>
 
         <!-- FAQ Section -->
         <div class="faq-section" id="faq-section">
-            <h2>❓ Câu hỏi thường gặp</h2>
+            <h2>❓ FAQ</h2>
+            <p>Add a Frequently Asked Questions (FAQ) section to address common user concerns.</p>
             <div class="faq-container">
                 <div class="faq-item">
-                    <h3>Chatbox có hỗ trợ tiếng Việt không?</h3>
-                    <p>Có, Gemini Store Chatbox hỗ trợ đầy đủ tiếng Việt và có thể trả lời bằng tiếng Việt tự nhiên.</p>
+                    <h3>Does the chatbox support Vietnamese?</h3>
+                    <p>Yes, Gemini Store Chatbox fully supports Vietnamese and can respond naturally in Vietnamese.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Tôi có thể upload bao nhiêu tài liệu?</h3>
-                    <p>Không giới hạn số lượng tài liệu, nhưng mỗi file tối đa 10MB để đảm bảo hiệu suất.</p>
+                    <h3>How many documents can I upload?</h3>
+                    <p>No limit on the number of documents, but each file is limited to 10MB to ensure performance.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Chatbox có hoạt động trên mobile không?</h3>
-                    <p>Có, chatbox được tối ưu hoàn toàn cho mobile và responsive trên mọi thiết bị.</p>
+                    <h3>Does the chatbox work on mobile?</h3>
+                    <p>Yes, the chatbox is fully optimized for mobile and responsive on all devices.</p>
                 </div>
                 <div class="faq-item">
-                    <h3>Làm sao để chatbot trả lời chính xác hơn?</h3>
-                    <p>Upload nhiều tài liệu liên quan đến sản phẩm/dịch vụ của bạn để chatbot có thêm kiến thức.</p>
+                    <h3>How to make the chatbot more accurate?</h3>
+                    <p>Upload more documents related to your products/services so the chatbot has more knowledge.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Explaining Metrics Section -->
+        <!-- How To Use Section -->
+        <div class="how-to-section" id="how-to-section">
+            <h2>📖 How To Use</h2>
+            <p>Add a 'How to Use' or 'Getting Started' section to guide users on using your app or feature.</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Login to Admin Panel</h3>
+                        <p>Enter admin token "admin123" to access the management system</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Upload Documents</h3>
+                        <p>Drag and drop or select PDF, DOCX files for the chatbot to learn</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Copy Integration Code</h3>
+                        <p>Copy the HTML code and paste it into your website</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Test Functionality</h3>
+                        <p>The chatbox will appear in the bottom right corner of your website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Metrics Explanation Section -->
         <div class="metrics-section" id="metrics-section">
-            <h2>📊 Giải thích các chỉ số và kết quả</h2>
+            <h2>📊 Metrics Explanation</h2>
+            <p>Add content that explains key metrics, results, or what your tool does in detail.</p>
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-icon">📚</div>
-                    <h3>Tổng số tài liệu</h3>
-                    <p>Số lượng file PDF, DOCX đã upload để chatbot học hỏi kiến thức. Càng nhiều tài liệu, chatbot càng thông minh và trả lời chính xác hơn.</p>
+                    <h3>Total Documents</h3>
+                    <p>Number of PDF, DOCX files uploaded for the chatbot to learn. More documents = smarter chatbot with more accurate responses.</p>
                     <div class="metric-example">
-                        <strong>Ví dụ:</strong> 10 tài liệu = Chatbot có thể trả lời về 10 chủ đề khác nhau
+                        <strong>Example:</strong> 10 documents = Chatbot can answer about 10 different topics
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">🧩</div>
-                    <h3>Số lượng Chunks</h3>
-                    <p>Các đoạn văn bản nhỏ được tạo từ tài liệu để AI có thể hiểu và trả lời. Mỗi chunk chứa thông tin cụ thể về một chủ đề.</p>
+                    <h3>Number of Chunks</h3>
+                    <p>Small text segments created from documents for AI understanding. Each chunk contains specific information about a topic.</p>
                     <div class="metric-example">
-                        <strong>Ví dụ:</strong> 500 chunks = 500 câu trả lời khác nhau có thể được tạo ra
+                        <strong>Example:</strong> 500 chunks = 500 different answers can be generated
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">💾</div>
-                    <h3>Dung lượng tổng</h3>
-                    <p>Tổng dung lượng của tất cả tài liệu đã upload. Giúp bạn theo dõi việc sử dụng không gian lưu trữ.</p>
+                    <h3>Total Size</h3>
+                    <p>Total storage space used by all uploaded documents. Helps you monitor storage usage.</p>
                     <div class="metric-example">
-                        <strong>Ví dụ:</strong> 50MB = Đủ để lưu trữ hàng trăm trang tài liệu
+                        <strong>Example:</strong> 50MB = Enough to store hundreds of document pages
                     </div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-icon">🎯</div>
-                    <h3>Hiệu suất Chatbot</h3>
-                    <p>Chỉ số đánh giá chất lượng trả lời của chatbot dựa trên số lượng tài liệu và chunks. Cao hơn = trả lời chính xác hơn.</p>
+                    <h3>Chatbot Performance</h3>
+                    <p>Score evaluating chatbot response quality based on document and chunk count. Higher = more accurate responses.</p>
                     <div class="metric-example">
-                        <strong>Công thức:</strong> (Số chunks × 0.7) + (Số tài liệu × 0.3) = Điểm hiệu suất
+                        <strong>Formula:</strong> (Chunks × 0.7) + (Documents × 0.3) = Performance Score
                     </div>
                 </div>
             </div>
-            
-            <div class="metrics-tips">
-                <h3>💡 Mẹo tối ưu hiệu suất:</h3>
-                <ul>
-                    <li><strong>Upload đa dạng:</strong> Tài liệu về sản phẩm, dịch vụ, FAQ, chính sách</li>
-                    <li><strong>Chất lượng nội dung:</strong> Tài liệu rõ ràng, có cấu trúc tốt</li>
-                    <li><strong>Cập nhật thường xuyên:</strong> Thêm tài liệu mới để chatbot luôn có thông tin mới nhất</li>
-                    <li><strong>Kiểm tra kết quả:</strong> Test chatbot thường xuyên để đảm bảo trả lời chính xác</li>
-                </ul>
-            </div>
         </div>
 
-        <!-- Cross-sell Section -->
-        <div class="cross-sell-section" id="cross-sell-section">
-            <h2>🔗 Công cụ liên quan</h2>
-            <div class="cross-sell-grid">
-                <div class="cross-sell-item">
-                    <div class="cross-sell-icon">📊</div>
-                    <h3>Google Analytics</h3>
-                    <p>Theo dõi hiệu suất chatbox và phân tích hành vi khách hàng</p>
-                    <a href="https://analytics.google.com" target="_blank" class="btn btn-secondary">Tìm hiểu thêm</a>
+        <!-- Why Use Features Section -->
+        <div class="features-section" id="features-section">
+            <h2>🚀 Why Use Features</h2>
+            <p>Include a section explaining 'Why Use' or highlighting key features and benefits.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>Smart AI Chatbot</h3>
+                    <p>Uses Google Gemini AI to answer customers 24/7 with high accuracy</p>
                 </div>
-                <div class="cross-sell-item">
-                    <div class="cross-sell-icon">🎨</div>
-                    <h3>Customize Chatbox</h3>
-                    <p>Tùy chỉnh giao diện và màu sắc chatbox phù hợp với brand</p>
-                    <a href="#" class="btn btn-secondary">Tùy chỉnh</a>
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Document Management</h3>
+                    <p>Upload and manage PDF, DOCX documents for chatbot learning</p>
                 </div>
-                <div class="cross-sell-item">
-                    <div class="cross-sell-icon">📈</div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Báo cáo chi tiết về cuộc hội thoại và tỷ lệ chuyển đổi</p>
-                    <a href="#" class="btn btn-secondary">Xem báo cáo</a>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Easy Integration</h3>
+                    <p>Just copy 1 line of HTML code to integrate chatbox into website</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Performance Tracking</h3>
+                    <p>View statistics on document count, chunks and storage used</p>
                 </div>
             </div>
         </div>
@@ -1435,7 +1871,7 @@
             <div class="stats-grid" id="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number" id="total-docs">-</div>
-                    <div class="stat-label">Tài liệu</div>
+                    <div class="stat-label">Documents</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="total-chunks">-</div>
@@ -1443,14 +1879,14 @@
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="total-size">-</div>
-                    <div class="stat-label">Dung lượng</div>
+                    <div class="stat-label">Size</div>
                 </div>
             </div>
 
             <!-- Script Integration Section -->
             <div class="script-section">
                 <div class="script-header">
-                    <h2 class="script-title">🔗 Tích hợp Chatbox vào Website</h2>
+                    <h2 class="script-title">🔗 Integrate Chatbox into Website</h2>
                     <button id="copy-script-btn" class="copy-btn">
                         <span>📋</span> Copy Code
                     </button>
@@ -1459,32 +1895,32 @@
                 <div class="script-code" id="script-code">&lt;!-- Gemini Store Chatbox --&gt;<br>&lt;script src="<span id="script-url">https://jun99hm.xyz/ai-chatbox/widget</span>"&gt;&lt;/script&gt;</div>
                 
                 <div class="script-instructions">
-                    <h4>📋 Hướng dẫn tích hợp:</h4>
+                    <h4>📋 Integration Instructions:</h4>
                     <ol>
-                        <li>Copy đoạn code HTML ở trên</li>
-                        <li>Paste vào phần &lt;head&gt; của website của bạn</li>
-                        <li>Code đã sẵn sàng để sử dụng với domain jun99hm.xyz</li>
-                        <li>Lưu và reload trang web</li>
-                        <li>Chatbox sẽ xuất hiện ở góc dưới bên phải</li>
+                        <li>Copy the HTML code above</li>
+                        <li>Paste it into the &lt;head&gt; section of your website</li>
+                        <li>Code is ready to use with domain jun99hm.xyz</li>
+                        <li>Save and reload your website</li>
+                        <li>Chatbox will appear in the bottom right corner</li>
                     </ol>
                 </div>
                 
                 <div class="script-preview">
-                    <h4>👀 Xem trước:</h4>
-                    <div class="preview-demo">&lt;head&gt;<br>&nbsp;&nbsp;&lt;title&gt;Website của bạn&lt;/title&gt;<br>&nbsp;&nbsp;&lt;!-- Gemini Store Chatbox --&gt;<br>&nbsp;&nbsp;&lt;script src="https://jun99hm.xyz/ai-chatbox/widget"&gt;&lt;/script&gt;<br>&lt;/head&gt;</div>
+                    <h4>👀 Preview:</h4>
+                    <div class="preview-demo">&lt;head&gt;<br>&nbsp;&nbsp;&lt;title&gt;Your Website&lt;/title&gt;<br>&nbsp;&nbsp;&lt;!-- Gemini Store Chatbox --&gt;<br>&nbsp;&nbsp;&lt;script src="https://jun99hm.xyz/ai-chatbox/widget"&gt;&lt;/script&gt;<br>&lt;/head&gt;</div>
                 </div>
             </div>
 
             <!-- Upload Section -->
             <div class="upload-section">
-                <h2 style="margin-bottom: 16px;">📤 Upload Tài liệu</h2>
+                <h2 style="margin-bottom: 16px;">📤 Upload Documents</h2>
                 <div class="upload-area" id="upload-area">
                     <div class="upload-icon">📄</div>
-                    <div class="upload-text">Kéo thả file vào đây hoặc click để chọn</div>
-                    <div class="upload-subtext">Hỗ trợ: PDF, DOCX, TXT (tối đa 10MB)</div>
+                    <div class="upload-text">Drag & drop files here or click to select</div>
+                    <div class="upload-subtext">Supports: PDF, DOCX, TXT (max 10MB each)</div>
                     <input type="file" id="file-input" class="file-input" accept=".pdf,.docx,.txt,.doc" multiple />
                     <button class="btn btn-primary" onclick="document.getElementById('file-input').click()">
-                        Chọn File
+                        Select Files
                     </button>
                 </div>
                 <div id="upload-alert" class="alert hidden"></div>
@@ -1493,9 +1929,9 @@
             <!-- Documents Section -->
             <div class="documents-section">
                 <div class="section-header">
-                    <h2 class="section-title">📚 Danh sách Tài liệu</h2>
+                    <h2 class="section-title">📚 Documents List</h2>
                     <button id="refresh-btn" class="btn btn-secondary">
-                        <span>🔄</span> Làm mới
+                        <span>🔄</span> Refresh
                     </button>
                 </div>
                 
@@ -1504,18 +1940,18 @@
                 <table class="documents-table" id="documents-table">
                     <thead>
                         <tr>
-                            <th>Tên file</th>
-                            <th>Loại</th>
-                            <th>Kích thước</th>
+                            <th>File Name</th>
+                            <th>Type</th>
+                            <th>Size</th>
                             <th>Chunks</th>
-                            <th>Ngày tạo</th>
-                            <th>Thao tác</th>
+                            <th>Created Date</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody id="documents-tbody">
                         <tr>
                             <td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">
-                                Chưa có tài liệu nào
+                                No documents yet
                             </td>
                         </tr>
                     </tbody>
@@ -1531,7 +1967,7 @@
                 <div class="footer-section">
                     <div class="footer-logo">
                         <h3>🤖 Gemini Store Chatbox</h3>
-                        <p>AI Chatbot Management Tool cho cửa hàng của bạn</p>
+                        <p>AI Chatbot Management Tool for your store</p>
                     </div>
                     <div class="footer-social">
                         <a href="#" class="social-link" aria-label="Facebook">
@@ -1550,7 +1986,7 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>Sản phẩm</h4>
+                    <h4>Products</h4>
                     <ul class="footer-links">
                         <li><a href="/ai-chatbox/admin">Admin Panel</a></li>
                         <li><a href="/ai-chatbox/widget">Chatbox Widget</a></li>
@@ -1560,30 +1996,30 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>Tài nguyên</h4>
+                    <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="/docs">Tài liệu</a></li>
-                        <li><a href="/tutorials">Hướng dẫn</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="/tutorials">Tutorials</a></li>
                         <li><a href="/api">API Reference</a></li>
-                        <li><a href="/support">Hỗ trợ</a></li>
+                        <li><a href="/support">Support</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Công ty</h4>
+                    <h4>Company</h4>
                     <ul class="footer-links">
-                        <li><a href="/about">Về chúng tôi</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="/blog">Blog</a></li>
-                        <li><a href="/careers">Tuyển dụng</a></li>
-                        <li><a href="/contact">Liên hệ</a></li>
+                        <li><a href="/careers">Careers</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Pháp lý</h4>
+                    <h4>Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="/privacy">Chính sách bảo mật</a></li>
-                        <li><a href="/terms">Điều khoản sử dụng</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms of Service</a></li>
                         <li><a href="/cookies">Cookie Policy</a></li>
                         <li><a href="/gdpr">GDPR</a></li>
                     </ul>
@@ -1658,12 +2094,12 @@
         async function authenticate() {
             const token = adminTokenInput.value.trim();
             if (!token) {
-                showAlert(authAlert, 'Vui lòng nhập admin token', 'error');
+                showAlert(authAlert, 'Please enter admin token', 'error');
                 return;
             }
 
             loginBtn.disabled = true;
-            loginBtn.innerHTML = '<span class="loading"></span> Đang xác thực...';
+            loginBtn.innerHTML = '<span class="loading"></span> Authenticating...';
 
             try {
                 const response = await fetch(API_BASE + '/api/admin/login', {
@@ -1683,13 +2119,13 @@
                     loadDocuments();
                     loadStats();
                 } else {
-                    showAlert(authAlert, data.message || 'Token không hợp lệ', 'error');
+                    showAlert(authAlert, data.message || 'Invalid token', 'error');
                 }
             } catch (error) {
-                showAlert(authAlert, 'Lỗi kết nối. Vui lòng thử lại.', 'error');
+                showAlert(authAlert, 'Connection error. Please try again.', 'error');
             } finally {
                 loginBtn.disabled = false;
-                loginBtn.innerHTML = '<span>Đăng nhập</span>';
+                loginBtn.innerHTML = '<span>Login</span>';
             }
         }
 
@@ -1710,10 +2146,10 @@
                 if (response.ok) {
                     displayDocuments(data.documents || []);
                 } else {
-                    showAlert(uploadAlert, 'Lỗi tải danh sách tài liệu', 'error');
+                    showAlert(uploadAlert, 'Error loading documents list', 'error');
                 }
             } catch (error) {
-                showAlert(uploadAlert, 'Lỗi kết nối khi tải tài liệu', 'error');
+                showAlert(uploadAlert, 'Connection error when loading documents', 'error');
             } finally {
                 documentsLoading.classList.add('hidden');
                 documentsTable.classList.remove('hidden');
@@ -1726,7 +2162,7 @@
                 documentsTbody.innerHTML = 
                     '<tr>' +
                         '<td colspan="6" style="text-align: center; padding: 40px; color: #9ca3af;">' +
-                            'Chưa có tài liệu nào' +
+                            'No documents yet' +
                         '</td>' +
                     '</tr>';
                 return;
@@ -1752,7 +2188,7 @@
                             'onclick="deleteDocument(\'' + doc.id + '\')" ' +
                             'style="padding: 6px 12px; font-size: 12px;"' +
                         '>' +
-                            '🗑️ Xóa' +
+                            '🗑️ Delete' +
                         '</button>' +
                     '</td>' +
                 '</tr>'
@@ -1787,7 +2223,7 @@
 
         // Delete document
         async function deleteDocument(docId) {
-            if (!confirm('Bạn có chắc chắn muốn xóa tài liệu này?')) {
+            if (!confirm('Are you sure you want to delete this document?')) {
                 return;
             }
 
@@ -1802,14 +2238,14 @@
                 const data = await response.json();
 
                 if (response.ok && data.success) {
-                    showAlert(uploadAlert, 'Xóa tài liệu thành công', 'success');
+                    showAlert(uploadAlert, 'Document deleted successfully', 'success');
                     loadDocuments();
                     loadStats();
                 } else {
-                    showAlert(uploadAlert, data.message || 'Lỗi xóa tài liệu', 'error');
+                    showAlert(uploadAlert, data.message || 'Error deleting document', 'error');
                 }
             } catch (error) {
-                showAlert(uploadAlert, 'Lỗi kết nối khi xóa tài liệu', 'error');
+                showAlert(uploadAlert, 'Connection error when deleting document', 'error');
             }
         }
 
@@ -1830,14 +2266,14 @@
                 const data = await response.json();
 
                 if (response.ok && data.success) {
-                    showAlert(uploadAlert, 'Upload thành công: ' + file.name, 'success');
+                    showAlert(uploadAlert, 'Upload successful: ' + file.name, 'success');
                     loadDocuments();
                     loadStats();
                 } else {
-                    showAlert(uploadAlert, data.message || 'Lỗi upload file', 'error');
+                    showAlert(uploadAlert, data.message || 'Error uploading file', 'error');
                 }
             } catch (error) {
-                showAlert(uploadAlert, 'Lỗi kết nối khi upload file', 'error');
+                showAlert(uploadAlert, 'Connection error when uploading file', 'error');
             }
         }
 
@@ -1918,7 +2354,7 @@
                 
                 // Update button state
                 const originalText = copyScriptBtn.innerHTML;
-                copyScriptBtn.innerHTML = '<span>✅</span> Đã copy!';
+                copyScriptBtn.innerHTML = '<span>✅</span> Copied!';
                 copyScriptBtn.classList.add('copied');
                 
                 // Reset button after 2 seconds
@@ -1928,11 +2364,11 @@
                 }, 2000);
                 
                 // Show success message
-                showAlert(document.getElementById('auth-alert'), 'Đã copy code vào clipboard!', 'success');
+                showAlert(document.getElementById('auth-alert'), 'Code copied to clipboard!', 'success');
                 
             } catch (error) {
                 console.error('Failed to copy:', error);
-                showAlert(document.getElementById('auth-alert'), 'Không thể copy code. Vui lòng copy thủ công.', 'error');
+                showAlert(document.getElementById('auth-alert'), 'Cannot copy code. Please copy manually.', 'error');
             }
         }
         
