@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - Gemini Store Chatbox | Quản lý AI Chatbot</title>
+    <title>Admin Panel Gemini Store Chatbox - Free AI Chatbot Management Tool</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Admin Panel Gemini Store Chatbox - Quản lý AI chatbot chuyên nghiệp cho cửa hàng. Upload tài liệu, cấu hình chatbox, tích hợp dễ dàng với Google Gemini AI.">
+    <meta name="description" content="Free AI Chatbot Management Tool - Admin Panel Gemini Store Chatbox. Upload documents, configure chatbot, easy integration with Google Gemini AI. Start free today!">
     <meta name="keywords" content="admin panel, gemini chatbox, AI chatbot, quản lý chatbot, cửa hàng AI, Google Gemini, customer support">
     <meta name="author" content="Gemini Store Chatbox">
     <meta name="robots" content="noindex, nofollow">
@@ -36,7 +36,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Gemini Store Chatbox Admin Panel",
-        "description": "Admin panel để quản lý AI chatbot cho cửa hàng với Google Gemini AI",
+        "description": "Free AI Chatbot Management Tool - Admin Panel Gemini Store Chatbox. Upload documents, configure chatbot, easy integration with Google Gemini AI.",
         "url": "https://jun99hm.xyz/ai-chatbox/admin",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web Browser",
@@ -49,6 +49,43 @@
             "@type": "Organization",
             "name": "Gemini Store Chatbox",
             "url": "https://jun99hm.xyz"
+        },
+        "mainEntity": {
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Chatbox có hỗ trợ tiếng Việt không?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Có, Gemini Store Chatbox hỗ trợ đầy đủ tiếng Việt và có thể trả lời bằng tiếng Việt tự nhiên."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Tôi có thể upload bao nhiêu tài liệu?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Không giới hạn số lượng tài liệu, nhưng mỗi file tối đa 10MB để đảm bảo hiệu suất."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Chatbox có hoạt động trên mobile không?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Có, chatbox được tối ưu hoàn toàn cho mobile và responsive trên mọi thiết bị."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Làm sao để chatbot trả lời chính xác hơn?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Upload nhiều tài liệu liên quan đến sản phẩm/dịch vụ của bạn để chatbot có thêm kiến thức."
+                    }
+                }
+            ]
         }
     }
     </script>
@@ -72,24 +109,129 @@
             padding: 20px;
         }
 
-        .header {
+        /* Hero Section */
+        .hero-section {
+            margin-bottom: 32px;
+        }
+
+        .hero-banner {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 24px;
-            border-radius: 16px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.3);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
 
-        .header h1 {
-            font-size: 28px;
+        .hero-content h1 {
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
-        .header p {
+        .hero-subtitle {
+            font-size: 18px;
+            opacity: 0.95;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            font-size: 14px;
             opacity: 0.9;
-            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-preview {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .preview-screen {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            height: 200px;
+        }
+
+        .screen-header {
+            background: #f8fafc;
+            padding: 12px 16px;
+            font-weight: 600;
+            color: #1f2937;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .screen-content {
+            padding: 16px;
+            height: calc(100% - 50px);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .chat-message {
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            max-width: 80%;
+        }
+
+        .chat-message.user {
+            background: #e5e7eb;
+            color: #374151;
+            align-self: flex-end;
+        }
+
+        .chat-message.bot {
+            background: #dbeafe;
+            color: #1e40af;
+            align-self: flex-start;
+        }
+
+        .typing-indicator {
+            background: #f3f4f6;
+            color: #6b7280;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-style: italic;
+            align-self: flex-start;
+            max-width: 60%;
         }
 
         .auth-section {
@@ -705,6 +847,97 @@
             padding: 8px 16px;
         }
 
+        /* Metrics Section */
+        .metrics-section {
+            background: white;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 24px;
+        }
+
+        .metrics-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .metric-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s ease;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .metric-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .metric-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .metric-card p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .metric-example {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+            color: #0c4a6e;
+        }
+
+        .metrics-tips {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .metrics-tips h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #166534;
+            margin-bottom: 12px;
+        }
+
+        .metrics-tips ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .metrics-tips li {
+            font-size: 14px;
+            color: #166534;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -737,12 +970,28 @@
                 padding: 16px;
             }
 
-            .header h1 {
-                font-size: 24px;
+            .hero-banner {
+                grid-template-columns: 1fr;
+                padding: 24px;
+                gap: 24px;
             }
 
-            .header p {
-                font-size: 14px;
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                gap: 16px;
+            }
+
+            .preview-screen {
+                width: 250px;
+                height: 160px;
             }
 
             .auth-form {
@@ -759,6 +1008,10 @@
             }
 
             .cross-sell-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -808,10 +1061,36 @@
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🤖 Admin Panel - Gemini Store Chatbox</h1>
-            <p>Quản lý AI chatbot chuyên nghiệp cho cửa hàng với Google Gemini AI - Upload tài liệu, cấu hình chatbox và tích hợp dễ dàng</p>
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>🤖 Admin Panel - Gemini Store Chatbox</h1>
+                    <p class="hero-subtitle">Tăng 300% hiệu quả customer support với AI chatbot thông minh - Quản lý dễ dàng, tích hợp nhanh chóng, miễn phí hoàn toàn</p>
+                    <div class="hero-cta">
+                        <button id="hero-login-btn" class="btn btn-primary btn-large">
+                            <span>🚀 Bắt đầu miễn phí ngay</span>
+                        </button>
+                        <div class="hero-stats">
+                            <span class="stat-item">✅ Miễn phí 100%</span>
+                            <span class="stat-item">⚡ Setup trong 5 phút</span>
+                            <span class="stat-item">🎯 Tăng conversion 300%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-preview">
+                        <div class="preview-screen">
+                            <div class="screen-header">Gemini Store Chatbox</div>
+                            <div class="screen-content">
+                                <div class="chat-message user">Xin chào, tôi muốn hỏi về sản phẩm</div>
+                                <div class="chat-message bot">Chào bạn! Tôi có thể giúp bạn tìm hiểu về sản phẩm phù hợp. Bạn quan tâm đến sản phẩm nào?</div>
+                                <div class="typing-indicator">AI đang trả lời...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Authentication Section -->
@@ -916,6 +1195,55 @@
                     <h3>Làm sao để chatbot trả lời chính xác hơn?</h3>
                     <p>Upload nhiều tài liệu liên quan đến sản phẩm/dịch vụ của bạn để chatbot có thêm kiến thức.</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Explaining Metrics Section -->
+        <div class="metrics-section" id="metrics-section">
+            <h2>📊 Giải thích các chỉ số và kết quả</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">📚</div>
+                    <h3>Tổng số tài liệu</h3>
+                    <p>Số lượng file PDF, DOCX đã upload để chatbot học hỏi kiến thức. Càng nhiều tài liệu, chatbot càng thông minh và trả lời chính xác hơn.</p>
+                    <div class="metric-example">
+                        <strong>Ví dụ:</strong> 10 tài liệu = Chatbot có thể trả lời về 10 chủ đề khác nhau
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🧩</div>
+                    <h3>Số lượng Chunks</h3>
+                    <p>Các đoạn văn bản nhỏ được tạo từ tài liệu để AI có thể hiểu và trả lời. Mỗi chunk chứa thông tin cụ thể về một chủ đề.</p>
+                    <div class="metric-example">
+                        <strong>Ví dụ:</strong> 500 chunks = 500 câu trả lời khác nhau có thể được tạo ra
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">💾</div>
+                    <h3>Dung lượng tổng</h3>
+                    <p>Tổng dung lượng của tất cả tài liệu đã upload. Giúp bạn theo dõi việc sử dụng không gian lưu trữ.</p>
+                    <div class="metric-example">
+                        <strong>Ví dụ:</strong> 50MB = Đủ để lưu trữ hàng trăm trang tài liệu
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🎯</div>
+                    <h3>Hiệu suất Chatbot</h3>
+                    <p>Chỉ số đánh giá chất lượng trả lời của chatbot dựa trên số lượng tài liệu và chunks. Cao hơn = trả lời chính xác hơn.</p>
+                    <div class="metric-example">
+                        <strong>Công thức:</strong> (Số chunks × 0.7) + (Số tài liệu × 0.3) = Điểm hiệu suất
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics-tips">
+                <h3>💡 Mẹo tối ưu hiệu suất:</h3>
+                <ul>
+                    <li><strong>Upload đa dạng:</strong> Tài liệu về sản phẩm, dịch vụ, FAQ, chính sách</li>
+                    <li><strong>Chất lượng nội dung:</strong> Tài liệu rõ ràng, có cấu trúc tốt</li>
+                    <li><strong>Cập nhật thường xuyên:</strong> Thêm tài liệu mới để chatbot luôn có thông tin mới nhất</li>
+                    <li><strong>Kiểm tra kết quả:</strong> Test chatbot thường xuyên để đảm bảo trả lời chính xác</li>
+                </ul>
             </div>
         </div>
 
@@ -1279,6 +1607,20 @@
         loginBtn.addEventListener('click', authenticate);
         adminTokenInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter') authenticate();
+        });
+
+        // Hero CTA button
+        const heroLoginBtn = document.getElementById('hero-login-btn');
+        heroLoginBtn.addEventListener('click', () => {
+            // Scroll to auth section
+            document.getElementById('auth-section').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            // Focus on input
+            setTimeout(() => {
+                adminTokenInput.focus();
+            }, 500);
         });
 
         refreshBtn.addEventListener('click', () => {
